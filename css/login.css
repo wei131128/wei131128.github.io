@@ -1,0 +1,194 @@
+.main {
+  background-color: #000000;
+}
+.main .left {
+  display: block;
+  float: left;
+}
+.right {
+  /* width: 200px; */
+  float: right;
+  background-color: #ffffff;
+}
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.main a {
+  text-decoration: none;
+}
+.main .right {
+  width: 35%;
+  height: 525px;
+  border-radius: 5px;
+}
+.main .right .register {
+  padding-top: 20%;
+}
+.main .right .register li {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main .right .register li a {
+  height: 16px;
+  font-size: 17px;
+}
+.main .right .register li:nth-child(1) {
+  margin-left: 21%;
+  margin-right: 13%;
+}
+.main .right .register li:nth-child(1) a {
+  color: #1c1f26;
+}
+.main .right .register li:nth-child(2) a {
+  color: #c2c4c6;
+}
+.main .right .border {
+  clear: both;
+  width: 25%;
+  height: 1px;
+  margin-left: 21%;
+  background-color: #1c1f26;
+  margin-bottom: 10%;
+}
+.main .input-show span {
+  color: #c2c4c6;
+  display: block;
+  width: 46px;
+  height: 42px;
+  font-size: 30px;
+  border: 1px solid #c2c4c6;
+  border-right: none;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 42px;
+  margin-left: 6%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.main .input-show .text {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 42px;
+  width: 78%;
+  border: 1px solid #c2c4c6;
+  outline: none;
+}
+.main .input-show input::-webkit-input-placeholder {
+  color: #c2c4c6;
+  font-size: 14px;
+}
+.main .input-show .account-password > div {
+  margin-bottom: 25px;
+}
+.main .input-show .verity-code {
+  margin-left: 6%;
+}
+.main .input-show .verity-code input {
+  width: 65%;
+  border-radius: 4px;
+  display: block;
+  float: left;
+}
+.main .input-show .verity-code a {
+  display: block;
+  float: left;
+}
+.main .input-show .verity-code img {
+  width: 113px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+.forget-password a {
+  color: #1c1f26;
+  font-size: 14px;
+}
+.forget-password a:hover {
+  color: #f8b43f;
+  transition: color 0.2s;
+}
+.forget-password a:nth-child(1) {
+  margin-top: 20px;
+  display: block;
+  float: right;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+.forget-password a:nth-child(2) {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  margin-left: 6%;
+  width: 88%;
+  height: 45px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 45px;
+  background-color: #f5c26b;
+}
+.forget-password a:nth-child(2):hover {
+  background-color: #efb249;
+  transition: background-color 0.5s;
+}
+
+.forget-password a:nth-child(3) img {
+  display: block;
+  float: left;
+}
+.forget-password a:nth-child(3) {
+  display: block;
+  float: left;
+  margin-left: 6%;
+  margin-top: 40px;
+}
+.forget-password a:nth-child(4) {
+  display: block;
+  float: right;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+.input-show {
+  height: 185px;
+}
+.main .input-show .phone-number .verity-code .send-code {
+  display: block;
+  float: left;
+  line-height: 45px;
+  background-color: #f5c26b;
+  color: #fff;
+  width: 113px;
+  border-radius: 4px;
+  margin-left: 10px;
+  text-align: center;
+}
+.main .input-show .phone-number .verity-code .text-code {
+  width: 95%;
+}
+.main .input-show .phone-number > div:nth-child(2),
+.main .input-show .phone-number > div:nth-child(3) {
+  padding-top: 25px;
+}
+.main .right .input-show .account-password {
+  display: block;
+}
+.main .right .input-show .phone-number {
+  display: none;
+}
+html {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  height: 262px;
+  background-color: #131313;
+}
+footer .intro {
+  color: #707479;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 10px;
+}

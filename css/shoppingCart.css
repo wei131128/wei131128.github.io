@@ -1,0 +1,203 @@
+html {
+  background-color: #f1f2f6;
+}
+.main {
+  width: 100%;
+  margin-top: 76px;
+  clear: both;
+}
+.main .nav {
+  width: 100%;
+  height: 115px;
+  background-color: #ece4d9;
+}
+.main .nav > div {
+  margin-top: 45px;
+  display: block;
+  float: left;
+  color: #1c1f26;
+}
+.main .nav .word1 {
+  font-size: 26px;
+  line-height: 26px;
+  padding-left: 52px;
+}
+.main .nav .word1 span {
+  color: #fd6633;
+}
+.main .nav .word2,
+.main .nav .word3,
+.main .nav .word4 {
+  font-size: 18px;
+  margin-left: 21px;
+}
+.main .nav .word2 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1c1f26;
+  margin-left: 714px;
+}
+.main .shoppingCart {
+  width: 100%;
+  height: 800px;
+  background-color: #ffffff;
+}
+.main .shoppingCart .detail {
+  width: 100%;
+}
+.main .detail .inner {
+  width: 92%;
+  overflow: hidden;
+}
+.main .detail {
+  padding-top: 40px;
+}
+.main .detail .inner {
+  padding-bottom: 15px;
+  border-bottom: 3px solid #ece4d9;
+}
+.main .detail p {
+  display: block;
+  float: left;
+  color: #c5c4d0;
+}
+.main .detail p:nth-child(2) {
+  margin-left: 38px;
+}
+.main .detail p:nth-child(3) {
+  margin-left: 465px;
+}
+.main .detail p:nth-child(4) {
+  margin-left: 159px;
+}
+.main .detail p:nth-child(5) {
+  margin-left: 136px;
+}
+.main .detail p:nth-child(6) {
+  margin-left: 70px;
+}
+.main .goods {
+  width: 100%;
+  background-color: #fff;
+}
+.main .goods .inner {
+  width: 100%;
+}
+.main .goods-check {
+  width: 95%;
+  height: 165px;
+  /* border: 2px solid #fd6633; */
+  border-bottom: 1px solid #d3c7c6;
+  padding-top: 95px;
+  margin: 0 auto;
+}
+.main .checked {
+  margin-left: 35px;
+  display: block;
+  float: left;
+  margin-right: 70px;
+}
+.main .goods .goods-check img {
+  width: 100px;
+  margin-top: -30px;
+}
+.main .goods .goods-check > div {
+  display: block;
+  float: left;
+}
+.main .goods .detail {
+  margin-top: -70px;
+  width: 256px;
+  margin-left: 25px;
+  margin-right: 130px;
+}
+.main .goods .detail > div:nth-child(1) {
+  font-size: 14px;
+  color: #1c1f26;
+}
+.main .goods .detail > div:nth-child(1):hover a {
+  color: #f5c26b;
+  transition: color 0.5s;
+}
+.main .goods .detail > div:nth-child(2),
+.main .goods .detail > div:nth-child(3) {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #1c1f26;
+}
+.main .goods .goods-check .price {
+  color: #c2c4c6;
+  font-size: 16px;
+  margin-right: 96px;
+}
+.main .goods .goods-check .cut a,
+.main .goods .goods-check .add a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  color: #b39472;
+  border: 1px solid #b39472;
+  text-align: center;
+  font-size: 15px;
+  line-height: 26px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.main .goods .goods-check .num {
+  height: 26px;
+  width: 80px;
+  text-align: center;
+}
+.main .goods .goods-check .cut:hover a,
+.main .goods .goods-check .add:hover a {
+  color: #f5c26b;
+  border: 1px solid #f5c26b;
+  transition: all 0.5s;
+}
+.main .goods .goods-check .total {
+  margin-left: 67px;
+  font-size: 14px;
+  color: #ff6633;
+}
+.main .goods .goods-check .dele {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 50px;
+  margin-top: -5px;
+}
+.main .goods .goods-check .dele a {
+  color: #b39472;
+  text-decoration: none;
+}
+.heji {
+  width: 95%;
+  height: 47px;
+  margin: -47px auto;
+  background-color: #ece4d9;
+}
+.heji .total-price {
+  display: block;
+  float: right;
+  color: #fd7152;
+  width: 200px;
+  text-align: right;
+  font-size: 15px;
+  line-height: 45px;
+  padding-right: 20px;
+}
+.heji a {
+  display: block;
+  float: right;
+  width: 166px;
+  height: 47px;
+  background-color: #f5c26b;
+  text-decoration: none;
+  color: #fffbda;
+  font-size: 17px;
+  line-height: 45px;
+  text-align: center;
+}
+.total-num {
+  display: block;
+  margin-left: 115px;
+  line-height: 47px;
+}

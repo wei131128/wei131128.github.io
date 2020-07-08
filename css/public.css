@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 万能清除浮动 */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *height: 1%;
+}
+
+.header {
+  width: 100%;
+  background-color: #2b2e33;
+  height: 76px;
+  position: fixed;
+  top: 0;
+}
+.inner {
+  width: 78.99%;
+  margin: 0 auto;
+}
+.header .inner .menu {
+  padding-top: 20px;
+  display: block;
+  float: left;
+}
+.header .inner a {
+  text-decoration: none;
+}
+.header .inner .menu a span {
+  color: #707479;
+  font-size: 33px;
+}
+.header .inner .logo {
+  float: left;
+  margin-left: 36%;
+  padding-top: 7px;
+}
+.header .inner .shopping-cart {
+  display: block;
+  float: left;
+  margin-left: 27%;
+  padding-top: 20px;
+}
+.header .inner .shopping-cart span {
+  color: #c2c4c6;
+  font-size: 35px;
+}
+.header .inner .shopping-cart:hover span {
+  color: #f8b43f;
+  transition: color 0.2s;
+}
+.header .inner .denglu {
+  padding-top: 30px;
+  float: right;
+  color: #c2c4c6;
+}
+.header .inner .denglu a {
+  color: #c2c4c6;
+}
+.header .inner .denglu a:hover {
+  color: #f8b43f;
+  transition: color 0.2s;
+}

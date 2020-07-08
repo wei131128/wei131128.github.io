@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录_魔赞商城</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/iconfont.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="inner">
+        <div class="menu">
+          <a href="javascript:void(0)">
+            <!-- <img src="./images/toggle.png" alt="" /> -->
+            <span class="iconfont icon-caidan"></span>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="javascript:void(0)"
+            ><img src="./images/logo_03.jpg" alt=""
+          /></a>
+        </div>
+        <div class="shopping-cart clearfix">
+          <a href="./shoppingCart.html"
+            ><span class="iconfont icon-gouwuche"></span
+          ></a>
+        </div>
+        <div class="denglu">
+          <a href="javascript:void(0)">登录</a>&nbsp;|&nbsp;<a
+            href="javascript:void(0)"
+            >注册</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="main clearfix">
+      <div class="inner">
+        <div class="left">
+          <a href="./detail.html"><img src="./images/loginpic.png" alt="" /></a>
+        </div>
+        <div class="right clearfix">
+          <!-- <div class="account-password">账号密码登录</div>
+          <div class="phone-number">手机验证码登录</div> -->
+          <ul class="register">
+            <li><a href="javascript:void(0)">账号密码登录</a></li>
+            <li><a href="javascript:void(0)">手机验证码登录</a></li>
+          </ul>
+          <div class="border"></div>
+          <div class="input-show">
+            <div class="account-password clearfix show">
+              <div class="">
+                <span class="iconfont icon-renxiang"></span>
+                <input
+                  class="text"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入手机号码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+              </div>
+              <div>
+                <span class="iconfont icon-mima"></span>
+                <input
+                  class="text"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入密码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+              </div>
+              <div class="verity-code">
+                <input
+                  class="text"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入验证码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+                <a href="javascript:void(0)"
+                  ><img src="./images/yzm.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="phone-number show">
+              <div class="verity-code clearfix">
+                <input
+                  class="text"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入图片验证码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+                <a href="javascript:void(0)"
+                  ><img src="./images/yzm.png" alt="" />
+                </a>
+              </div>
+              <div class="verity-code clearfix">
+                <input
+                  class="text"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入图片验证码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+                <a class="send-code" href="javascript:void(0)">获取验证码</a>
+              </div>
+              <div class="verity-code clearfix">
+                <input
+                  class="text text-code"
+                  placeholder="&nbsp;&nbsp;&nbsp;请输入图片验证码"
+                  type="text"
+                  maxlength="11"
+                  name="phone"
+                  id="login_phone"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="forget-password clearfix">
+            <a class="clearfix" href="javascript:void(0)">忘记密码？</a>
+            <a class="clearfix" href="./home.html">登录</a>
+            <a href="./WeChatLogin.html"
+              ><img
+                src="./images/QQ-weixin_02.png"
+                alt=""
+              />&nbsp;&nbsp;&nbsp;微信登录</a
+            >
+            <a href="javascript:void(0)">注册</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="inner">
+        <div class="intro">
+          Morethan.cc All rights reserved.京ICP备15067340号.
+          <br />地址：北京市朝阳区广顺北大街33号福码大厦B座601 <br />
+          客服电话：400-113-5353(工作时间：周一至周五 9:00 - 18:00)
+        </div>
+      </div>
+    </footer>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(".main .right .register li").click(function () {
+        var ind = $(this).index();
+        if (ind == 0) {
+          $(".main .right .input-show .account-password").css(
+            "display",
+            "block"
+          );
+          $(".main .right .border").css("margin-left", "21%");
+          $(".main .right .input-show .phone-number").css("display", "none");
+
+          $(".main .right .register li:nth-child(1)").css("color", "#c2c4c6");
+          $(".main .right .register li:nth-child(1) a").css("color", "#1c1f26");
+          $(".main .right .register li:nth-child(2) a").css("color", "#c2c4c6");
+        } else if (ind == 1) {
+          $(".main .right .input-show .account-password").css(
+            "display",
+            "none"
+          );
+          $(".main .right .input-show .phone-number").css("display", "block");
+          $(".main .right .border").css("margin-left", "61%");
+          $(".main .right .register li:nth-child(2) a").css("color", "#1c1f26");
+          $(".main .right .register li:nth-child(1) a").css("color", "#c2c4c6");
+        }
+      });
+    </script>
+  </body>
+</html>

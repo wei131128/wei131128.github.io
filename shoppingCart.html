@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/iconfont.css" />
+    <link rel="stylesheet" href="./css/shoppingCart.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="inner">
+        <div class="menu">
+          <a href="javascript:void(0)">
+            <!-- <img src="./images/toggle.png" alt="" /> -->
+            <span class="iconfont icon-caidan"></span>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="javascript:void(0)"
+            ><img src="./images/logo_03.jpg" alt=""
+          /></a>
+        </div>
+        <div class="shopping-cart clearfix">
+          <a href="./shoppingCart.html"
+            ><span class="iconfont icon-gouwuche"></span
+          ></a>
+        </div>
+        <div class="denglu">
+          <a href="javascript:void(0)">登录</a>&nbsp;|&nbsp;<a
+            href="javascript:void(0)"
+            >注册</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="inner">
+        <div class="nav">
+          <div class="word1">购物车[<span>0</span>]件</div>
+          <div class="word2">购物车</div>
+          <div class="word3">填写订单</div>
+          <div class="word4">购买成功</div>
+        </div>
+        <div class="shoppingCart">
+          <div class="detail">
+            <div class="inner">
+              <p>
+                <input class="checkAll" type="checkbox" checked />&nbsp;全选
+              </p>
+              <p>商品</p>
+              <p>单价</p>
+              <p>数量</p>
+              <p>小计</p>
+              <p>操作</p>
+            </div>
+          </div>
+          <div class="goods">
+            <div class="inner"></div>
+          </div>
+          <div class="heji">
+            <a href="javascript:void(0)">去结算</a>
+            <div class="total-price"></div>
+            <div class="del-checked"><a href="javascript:void(0)">删除</a></div>
+            <div class="total-num">共件</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      var goodsArr = [
+        {
+          images: "./images/mainbox1.jpg",
+          introdus: "Apple MacBook Air 13.3英寸笔记本电脑（2018新款）",
+          color: "颜色：深空灰色",
+          capa: "容量：触控ID/八代Core i5/8GB内存/128GB固态硬盘",
+          cut: "-",
+          num: "1",
+          add: "+",
+          price: "9499",
+          total: "9499",
+        },
+        {
+          images: "./images/menu3.png",
+          introdus: "Apple MacBook Air 13.3英寸笔记本电脑（2018新款）",
+          color: "颜色：深空灰色",
+          capa: "容量：触控ID/八代Core i5/8GB内存/128GB固态硬盘",
+          cut: "-",
+          num: "1",
+          add: "+",
+          price: "9899",
+          total: "9899",
+        },
+        {
+          images: "./images/menu4.png",
+          introdus: "Apple MacBook Air 13.3英寸笔记本电脑（2018新款）",
+          color: "颜色：深空灰色",
+          capa: "容量：触控ID/八代Core i5/8GB内存/128GB固态硬盘",
+          cut: "-",
+          num: "1",
+          add: "+",
+          price: "499",
+          total: "499",
+        },
+        {
+          images: "./images/menu5.png",
+          introdus: "Apple MacBook Air 13.3英寸笔记本电脑（2018新款）",
+          color: "颜色：深空灰色",
+          capa: "容量：触控ID/八代Core i5/8GB内存/128GB固态硬盘",
+          cut: "-",
+          num: "1",
+          add: "+",
+          price: "5499",
+          total: "5499",
+        },
+      ];
+      function shop(arr) {
+        var goods = $(".main .goods .inner");
+        for (var i = 0; i < goodsArr.length; i++) {
+          var goodsDetail = `<div class="goods-check">
+          <div class="pic">
+            <input class="checked" type="checkbox" checked/>
+             <img src="${goodsArr[i].images}"/>
+          </div>
+          <div class="detail">
+            <div><a>${goodsArr[i].introdus}</a></div>
+             <div>${goodsArr[i].color}</div>
+             <div>${goodsArr[i].capa}</div>
+          </div>
+              <div class="price">${goodsArr[i].price}</div>
+             <div class="cut"><a  href="javascript:void(0)">${goodsArr[i].cut}</a></div>
+             <div class="num">${goodsArr[i].num}</div>
+             <div class="add"><a href="javascript:void(0)">${goodsArr[i].add}</a></div>
+             <div class="total">${goodsArr[i].total}</div>
+             <div class="dele"><a href="javascript:void(0)">x</a></div>
+          </div>`;
+          goods.append(goodsDetail);
+        }
+      }
+      $(document).ready(function () {
+        shop(goodsArr);
+        // $(".goods-check").each(function () {
+        // var price = $(this).find(".price").text();
+        // price += "";
+        // $(this).find(".price").text(formatNum(price));
+        // });
+        getTotal($(".checked"));
+        $(".checkAll").change(function () {
+          var state = $(this).prop("checked");
+          $(".shoppingCart input:checkbox").prop("checked", state);
+          getTotal($(".checked"));
+        });
+        $(".goods-check  .checked").change(function () {
+          var state = $(this).prop("checked");
+          if (state) {
+            //  each 的功能就是遍历所有的元素执行函数
+            // 默认所有人都选中了
+            var allChecked = true;
+            // 要查看当前页面上的所有存在的商品
+            // 不能把获取所有单选的选择器定义在外面
+            $(".checked").each(function () {
+              // 在这个函数内 $(this) 指的就是当前的元素
+              console.log("查询次数");
+              if (!$(this).prop("checked")) {
+                allChecked = false;
+              }
+            });
+            $(".checkAll").prop("checked", allChecked);
+          } else {
+            $(".checkAll").prop("checked", false);
+          }
+          getTotal($(".checked"));
+        });
+        $(".dele").click(function () {
+          $(this).parent().remove();
+          // 判断当前商品是否选中再去计算
+          getTotal($(".checked"));
+        });
+        $(".del-checked").click(function () {
+          $(".checked").each(function () {
+            if ($(this).prop("checked")) {
+              $(this).parent(".pic").parent(".goods-check").remove();
+            }
+          });
+          getTotal($(".checked"));
+        });
+        $(".add").click(function () {
+          var num = $(this).parent(".goods-check").find(".num").text() * 1;
+          var price = $(this).siblings(".price").text() * 1;
+          num++;
+          $(this).parents(".goods-check").find(".num").text(num);
+          $(this)
+            .parents(".goods-check")
+            .find(".total")
+            .text(num * price);
+          getTotal($(".checked"));
+        });
+        $(".cut").click(function () {
+          var num = $(this).parent(".goods-check").find(".num").text() * 1;
+          var price = $(this).siblings(".price").text() * 1;
+          if (num > 1) {
+            num--;
+            $(this).parents(".goods-check").find(".num").text(num);
+            $(this)
+              .parents(".goods-check")
+              .find(".total")
+              .text(num * price);
+            getTotal($(".checked"));
+          }
+        });
+        function getTotal(allGoods) {
+          var totalNum = 0;
+          var totalPrice = 0;
+          allGoods.each(function () {
+            if ($(this).prop("checked")) {
+              console.log(1);
+              totalNum =
+                totalNum +
+                $(this).parents(".goods-check").find(".num").text() * 1;
+              totalPrice =
+                totalPrice +
+                $(this).parents(".goods-check").find(".num").text() *
+                  1 *
+                  $(this).parents(".goods-check").find(".price").text() *
+                  1;
+            }
+          });
+          totalPrice += "";
+          // console.log(typeof totalPrice);
+          $(".total-price").text(formatNum(totalPrice));
+          $(".total-num").text("已选" + totalNum + "件商品");
+        }
+
+        function formatNum(str) {
+          var newStr = "";
+          var count = 0;
+          if (str.indexOf(".") == -1) {
+            for (var i = str.length - 1; i >= 0; i--) {
+              if (count % 3 == 0 && count != 0) {
+                newStr = str.charAt(i) + "," + newStr;
+              } else {
+                newStr = str.charAt(i) + newStr;
+              }
+              count++;
+            }
+            str = newStr + ".00"; //自动补小数点后两位
+            console.log(str);
+          } else {
+            for (var i = str.indexOf(".") - 1; i >= 0; i--) {
+              if (count % 3 == 0 && count != 0) {
+                newStr = str.charAt(i) + "," + newStr;
+              } else {
+                newStr = str.charAt(i) + newStr; //逐个字符相接起来
+              }
+              count++;
+            }
+            str = newStr + (str + "00").substr((str + "00").indexOf("."), 3);
+          }
+          str = "￥" + str;
+          return str;
+        }
+      });
+    </script>
+  </body>
+</html>
